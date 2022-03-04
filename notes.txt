@@ -1,0 +1,19 @@
+git init
+git clone url
+git remote add origin url
+git status
+git add .
+git log
+git log --oneline
+git commit -m "popis"
+git push origin master //git origin názevVětve
+git branch
+git status soubor
+git diff
+git diff soubor
+
+
+pull request
+
+git pull origin master
+

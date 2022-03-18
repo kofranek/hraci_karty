@@ -353,6 +353,12 @@ const diamonds = [d2,d3,d4,d5,d6,d7,d8,d9,d10,dj,dq,dk,da]
 const spades = [s2,s3,s4,s5,s6,s7,s8,s9,s10,sj,sq,sk,sa]
 */
 
+seznam = ['c2', 'c3', 'c4']
+  
+s='c5'
+
+
+
 for (const card of clubs) {
     zobrazKartu(card)    
 }
@@ -365,3 +371,14 @@ for (const card of diamonds) {
 for (const card of spades) {
     zobrazKartu(card)    
 }
+
+c = ['a', 'b', 'c']
+h = ['x', 'y', 'z']
+d = ['alfa', 'beta']
+const spoj = c.concat (h).concat(d)
+
+const cards = clubs.concat(hearts).concat(diamonds).concat(spades)
+
+console.log(cards, cards.length)
+
+for (const card of cards) {zobrazKartu(card)}

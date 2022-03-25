@@ -417,7 +417,7 @@ const diamonds = [d2,d3,d4,d5,d6,d7,d8,d9,d10,dj,dq,dk,da]
 const spades = [s2,s3,s4,s5,s6,s7,s8,s9,s10,sj,sq,sk,sa]
 */
 
-zobrazKartu(diamonds[10])
+//zobrazKartu(diamonds[10])
 console.log('délka diamonds',diamonds.length)
 console.log('délka spades',spades.length)
 
@@ -432,7 +432,8 @@ const cardsAll1 = [...clubs, ...hearts, ...diamonds, ...spades]
 console.log('počet prvků v cardsAll',cardsAll.length)
 
 
-for (const card of cardsAll) {zobrazKartu(card)}
+
+//for (const card of cardsAll) {zobrazKartu(card)}
 
 /*
 ÚKOL 2
@@ -468,3 +469,41 @@ const h2 = {
   rub: false
 }
 */
+
+
+
+function zobrazPoleKaret(pole) {
+  pole.forEach(element =>{
+    zobrazKartu(element)
+  })
+}
+
+karty1 = [h2,h3,h4]
+
+// push - přidání na konec
+karty1.push(ha)
+karty1.push(hq)
+karty1.push(hk)
+karty1.push(h8,h9,h10)
+
+//unshift - přidání na začátek
+karty1.unshift(sa)
+karty1.unshift(s2,s3,s4)
+
+// pop - ubrání z konce
+let k1=karty1.pop()
+console.log(k1.name)
+k1=karty1.pop()
+console.log(k1.name)
+k1=karty1.pop()
+console.log(k1.name)
+
+// shift()
+
+k1=karty1.shift()
+console.log('odebrána',k1.name)
+
+k1=karty1.shift()
+console.log('odebrána',k1.name)
+zobrazPoleKaret(karty1)
+

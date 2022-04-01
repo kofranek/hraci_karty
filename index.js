@@ -418,8 +418,8 @@ const spades = [s2,s3,s4,s5,s6,s7,s8,s9,s10,sj,sq,sk,sa]
 */
 
 //zobrazKartu(diamonds[10])
-console.log('délka diamonds',diamonds.length)
-console.log('délka spades',spades.length)
+//console.log('délka diamonds',diamonds.length)
+//console.log('délka spades',spades.length)
 
 const cards1=clubs.concat(hearts)
 
@@ -429,7 +429,7 @@ const cardsAll =  clubs.concat(hearts).concat(diamonds).concat(spades)
 
 const cardsAll1 = [...clubs, ...hearts, ...diamonds, ...spades]
 
-console.log('počet prvků v cardsAll',cardsAll.length)
+//console.log('počet prvků v cardsAll',cardsAll.length)
 
 
 
@@ -457,7 +457,7 @@ které bude obsahovat název karty:
 'c2','c3'...'c10','cj, 'cq', 'ck', 'ca' pro křížové karty,
 'd2','d3'...'d10','dj, 'dq', 'dk', 'da' pro kárové karty,
 's2','s3'...'s10','sj, 'sq', 'sk', 'sa' pro pikové karty,
-'h2','h3'...'h10','hj, 'hq', 'hk', 'ca' pro srdcové karty,
+'h2','h3'...'h10','hj, 'hq', 'hk', 'ha' pro srdcové karty,
 
 takže např objekt h2, reprezentující srdcovou dvojku bude vypadat takto:
 
@@ -478,32 +478,44 @@ function zobrazPoleKaret(pole) {
   })
 }
 
-karty1 = [h2,h3,h4]
 
-// push - přidání na konec
-karty1.push(ha)
-karty1.push(hq)
-karty1.push(hk)
-karty1.push(h8,h9,h10)
 
-//unshift - přidání na začátek
-karty1.unshift(sa)
-karty1.unshift(s2,s3,s4)
 
-// pop - ubrání z konce
-let k1=karty1.pop()
-console.log(k1.name)
-k1=karty1.pop()
-console.log(k1.name)
-k1=karty1.pop()
-console.log(k1.name)
+//console.log('pole diamonds',diamonds)
 
-// shift()
+let allCards=[...diamonds, ...clubs, ...hearts, ...spades]
 
-k1=karty1.shift()
-console.log('odebrána',k1.name)
+allCards=[...allCards, ha,ha,ha]
 
-k1=karty1.shift()
-console.log('odebrána',k1.name)
-zobrazPoleKaret(karty1)
+allCards=[]
+
+//přidat na konec
+
+allCards.push(ha)
+allCards.push(sa)
+
+//přidat na začátek
+
+allCards.unshift(h2)
+
+//uber poslední
+
+let karta=allCards.pop()
+
+console.log('karta=',karta)
+
+//uber první
+karta=allCards.shift()
+
+console.log('karta=',karta)
+
+//plnění pole
+
+allCards=[h2,h3,h4,h5,h6]
+
+//zaplní srdcovým esem od indexu 1 až do indexu 2
+allCards.fill(ha,1,3)
+
+zobrazPoleKaret(allCards)
+
 

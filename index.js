@@ -513,7 +513,7 @@ console.log('karta=',karta)
 
 allCards=[h2,h3,h4,h5,h6]
 
-//zaplní srdcovým esem od indexu 1 až do indexu 2
+//zaplní srdcovým esem od indexu 1 až do indexu 2 (index 3 už nezahrne)
 allCards.fill(ha,1,3)
 
 zobrazPoleKaret(allCards)
